@@ -8,8 +8,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-
-import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,8 +27,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
             // Construir el cuerpo de la solicitud para iniciar sesión (podría ser vacío en algunos casos)
             String requestBody = """
             {
-//                "usuario": "moises",
-//                "password": "moises"
+                "usuario": "moises",
+                "password": "moises"
             }
             """;
 
