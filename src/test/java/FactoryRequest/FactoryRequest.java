@@ -2,11 +2,17 @@ package FactoryRequest;
 
 public class FactoryRequest {
     public static IRequest make(String type){
-        return switch (type.toLowerCase()) {
-            case "post" -> new RequestPOST();
-            case "put" -> new RequestPUT();
-            case "delete" -> new RequestDELETE();
-            default -> new RequestGET();
-        };
+        type = type.toLowerCase();
+
+        switch (type) {
+            case "post":
+                return new RequestPOST();
+            case "put":
+                return new RequestPUT();
+            case "delete":
+                return new RequestDELETE();
+            default:
+                return new RequestGET();
+        }
     }
 }

@@ -25,12 +25,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
                     .setContentType("application/json");  // Añadir el tipo de contenido si es necesario
 
             // Construir el cuerpo de la solicitud para iniciar sesión (podría ser vacío en algunos casos)
-            String requestBody = """
-            {
-                "usuario": "moises",
-                "password": "moises"
-            }
-            """;
+            String requestBody = "{\n" +
+                    "    \"usuario\": \"moises\",\n" +
+                    "    \"password\": \"moises\"\n" +
+                    "}";
 
             // Configurar la solicitud para el inicio de sesión
             requestInfo.setBody(requestBody);
@@ -51,12 +49,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
                     .setContentType("application/json");  // Añadir el tipo de contenido si es necesario
 
             // Construir el cuerpo de la solicitud para iniciar sesión (podría ser vacío en algunos casos)
-            String requestBody = """
-            {
-                "usuario": "diplomado",
-                "password": "diplomado"
-            }
-            """;
+            String requestBody = "{\n" +
+                    "    \"usuario\": \"diplomado\",\n" +
+                    "    \"password\": \"diplomado\"\n" +
+                    "}";
 
             // Configurar la solicitud para el inicio de sesión
             requestInfo.setBody(requestBody);
@@ -69,6 +65,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
             requestInfo.setHeader("Authorization", "Bearer " + token);
         }
+
 
 //        @Given("using token in todo.ly")
 //        public void usingTokenInTodoLy() {
